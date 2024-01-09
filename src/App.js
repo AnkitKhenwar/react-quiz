@@ -84,7 +84,8 @@ function App() {
   const [{questions,status,index,answer,points,secondsRemaining},dispatch]=useReducer(reducer,initialState);
  
   useEffect(()=>{
-    fetch('https://api.jsonserve.com/chiM2-')
+    fetch('
+https://codingheroes.io/api-react-course-projects/questions.json')
     .then((res)=>res.json())
     .then((data)=>dispatch({type:"dataRecieved",payload:data}))
     .catch((err)=>dispatch({type:"dataFailed"}))
